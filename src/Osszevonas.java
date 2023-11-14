@@ -114,7 +114,7 @@ public class Osszevonas extends javax.swing.JFrame {
        }else{
            osszeg -= 200;
        }
-        
+        frissit();
     }//GEN-LAST:event_osszesito
 
     /**
