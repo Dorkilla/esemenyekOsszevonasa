@@ -1,3 +1,7 @@
+
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,12 +12,18 @@
  * @author dorki
  */
 public class Osszevonas extends javax.swing.JFrame {
-
+    int osszeg;
     /**
      * Creates new form Osszevonas
      */
     public Osszevonas() {
         initComponents();
+        osszeg=0;
+        frissit();
+    }
+
+    private void frissit() {
+        jTextField1.setText(osszeg + "Ft");
     }
 
     /**
@@ -93,9 +103,17 @@ public class Osszevonas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ /* A 3 JCheckBox ezt a metódust hívja, ha bekövetkezik 
+    az ItemStateChanged eseménye
+    */
     private void osszesito(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_osszesito
-        // TODO add your handling code here:
+       JCheckBox chb =(JCheckBox)evt.getSource();
+       if(chb.isSelected()){
+           osszeg += 200;
+       }else{
+           osszeg -= 200;
+       }
+        
     }//GEN-LAST:event_osszesito
 
     /**
