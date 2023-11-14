@@ -9,7 +9,7 @@ package esemenyekosszevonasa;
  * @author dorki
  */
 public class EsemenyekOsszevonasa {
-
+       
     /**
      * @param args the command line arguments
      */
